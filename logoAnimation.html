@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>cm logo animation</title>
+
+        <style>
+            #cmlogo {
+                stroke-dasharray: 184;
+                stroke-dashoffset: 184;
+                animation: logoDash 2.5s linear forwards;
+            }
+
+            #cmlogo2 {
+                stroke-dasharray: 214;
+                stroke-dashoffset: 214;
+                animation: logoDash2 2.2s 0.7s linear forwards;
+            }
+
+            @keyframes logoDash {
+                to {
+                    stroke-dashoffset: 0;
+                }
+            }
+
+            @keyframes logoDash2 {
+                to {
+                    stroke-dashoffset: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <svg
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                width="85px"
+                height="85px"
+                viewBox="0 0 85.039 85.04"
+                enable-background="new 0 0 85.039 85.04"
+                xml:space="preserve"
+            >
+                <path
+                    id="cmlogo"
+                    fill="#fff"
+                    stroke="#354F53"
+                    stroke-width="5"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    d="M
+		60.711,9.389 9.433,9.389 9.433,75.65 75.606,75.65 	"
+                />
+
+                <path
+                    id="cmlogo2"
+                    fill="none"
+                    stroke="#354F53"
+                    stroke-width="5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    d="M
+		10.039,9.434 43.108,75.65 43.152,9.434 75.606,75.65 "
+                />
+            </svg>
+            <!-- <object
+                data="./cmlogo-stroke.svg"
+                type="image/svg+xml"
+                width="170px"
+                height="170px"
+                id="cmlogo"
+            ></object> -->
+        </div>
+
+        <script>
+            const cmlogo = document.querySelector("#cmlogo");
+            const length = cmlogo.getTotalLength();
+            console.log(length);
+            const cmlogo2 = document.querySelector("#cmlogo2");
+            const length2 = cmlogo2.getTotalLength();
+            console.log(length2);
+        </script>
+    </body>
+</html>
